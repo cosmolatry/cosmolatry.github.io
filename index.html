@@ -1,1 +1,55 @@
-<h1>test</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmolatry</title>
+    <style>
+        /* Remove default margins and ensure body fills the screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black; /* Dark background for better contrast */
+        }
+
+        /* Use Flexbox to perfectly center content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container {
+            /* vmin is the magic unit here. 
+               1vmin = 1% of the smallest viewport dimension (width or height).
+               90vmin means the square will be 90% of the smallest side.
+            */
+            width: 100vmin;
+            height: 100vmin;
+            
+            /* Optional styling */
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            background-color: black;
+        }
+
+        /* Ensure the image fills the container */
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Crops image to fit square without distortion */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img 
+            src="cosmolatry.webp" 
+            alt="Cosmolatry"
+            onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'color:white; display:flex; justify-content:center; align-items:center; height:100%;\'>Image failed to load</div>'"
+        >
+    </div>
+</body>
+</html>

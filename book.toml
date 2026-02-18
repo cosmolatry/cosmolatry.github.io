@@ -1,5 +1,8 @@
 [book]
-language = "en"
-multilingual = false
-src = "src"
 title = "test"
+authors = ["cosmolatry"]
+language = "en"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "coal"

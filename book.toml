@@ -1,6 +1,6 @@
 [book]
-title = "test"
-authors = ["cosmolatry"]
+title = ""
+authors = [""]
 language = "en"
 
 [output.html]

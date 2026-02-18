@@ -1,3 +1,7 @@
-# Introduction
+# A Nation For The Nationless
 
-This is a test!
+The principal factors that decide a person's position within humanity are who their parents are and where they were born. As social beings, we begin our lives assigned to communities: the larger social structures that are formed from the social connections of individuals. The largest of these social structures, or communities, are called nations. Through the use of governing institutions, nations come to own and exert their power over a defined territory and ultimately over the individuals which reside within. We are thus born typically under the influence of one nation which develops us to become a part of it.
+
+This is an imperfect process made significantly more ineffective with technological advances in communication between people all over the world. Artificial intelligence, the internet, the smartphone, and the computer are some of the most recent developments which are causing a breakdown of the constraints that gave stability to national formation. This is resulting in a general crisis of community, the alienation of people from their localities and a distressing pandemic of isolation in a world of billions. The breakdown of our collective identities leave us unable to organize and take control of our destinies, marginalizing us, pushing us into obscurity and depriving us of our potential to truly live.
+
+This project intends to resolve this crisis through the construction of a new nation for the new era. We will be establishing the constitution of a community that acts as the framework of a common bond for the future of humanity, for those seeking a great home with great people for a great life.

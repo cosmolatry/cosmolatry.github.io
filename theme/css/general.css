@@ -16,7 +16,7 @@ html {
 
 body {
     margin: 0;
-    font-size: 1.6rem;
+    font-size: 2rem;
     overflow-x: hidden;
 }
 
@@ -105,9 +105,9 @@ html:not(.js) .page-wrapper,
     margin-inline-end: auto;
     max-width: var(--content-max-width);
 }
-.content p { line-height: 1.45em; }
-.content ol { line-height: 1.45em; }
-.content ul { line-height: 1.45em; }
+.content p { line-height: 1.75em; margin-bottom: 1.75em; letter-spacing: 0.02em;}
+.content ol { line-height: 1.75em; margin-bottom: 1.75em; letter-spacing: 0.02em;}
+.content ul { line-height: 1.75em; margin-bottom: 1.75em; letter-spacing: 0.02em;}
 .content a { text-decoration: none; }
 .content a:hover { text-decoration: underline; }
 .content img, .content video { max-width: 100%; }
@@ -405,4 +405,18 @@ dd > p {
     fill: currentColor;
     /* Add some space between the icon and the text. */
     margin-right: 8px;
+}
+
+/* Force the custom font onto the main elements */
+body, .content main {
+    font-family: 'Open Sauce One', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .sidebar {
+    font-family: 'Open Sauce One', sans-serif !important;
+}
+
+code, pre {
+    /* Keep your mono font separate if you have one */
+    font-family: var(--mono-font), monospace;
 }

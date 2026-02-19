@@ -98,3 +98,83 @@
   font-weight: 500;
   src: url('{{ resource "fonts/source-code-pro-v11-all-charsets-500.woff2" }}') format('woff2');
 }
+
+/* Open Sauce One - Light */
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('OpenSauceOne-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Open Sauce One - Light Italic */
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('OpenSauceOne-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Open Sauce One - Regular */
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('OpenSauceOne-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Open Sauce One - Italic */
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('OpenSauceOne-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Open Sauce One - Medium */
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('OpenSauceOne-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Open Sauce One - SemiBold */
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('OpenSauceOne-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Open Sauce One - Bold */
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('OpenSauceOne-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Open Sauce One - Bold Italic */
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('OpenSauceOne-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Open Sauce One - ExtraBold */
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('OpenSauceOne-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Open Sauce One - Black */
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('OpenSauceOne-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}

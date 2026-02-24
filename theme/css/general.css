@@ -18,7 +18,6 @@ body {
     margin: 0;
     overflow-x: hidden;
     font-size: clamp(1.5rem, 0.5rem + 2.1vw, 2.2rem);
-    max-width: 80ch;
 }
 
 code {
@@ -106,9 +105,9 @@ html:not(.js) .page-wrapper,
     margin-inline-end: auto;
     max-width: var(--content-max-width);
 }
-.content p { line-height: 1.75em; margin-bottom: 1.75em; letter-spacing: 0.02em;}
-.content ol { line-height: 1.75em; margin-bottom: 1.75em; letter-spacing: 0.02em;}
-.content ul { line-height: 1.75em; margin-bottom: 1.75em; letter-spacing: 0.02em;}
+.content p { line-height: 1.75em; margin-bottom: 1.75em; letter-spacing: 0.02em; text-align: justify;}
+.content ol { line-height: 1.75em; margin-bottom: 1.75em; letter-spacing: 0.02em; text-align: justify;}
+.content ul { line-height: 1.75em; margin-bottom: 1.75em; letter-spacing: 0.02em; text-align: justify;}
 .content a { text-decoration: none; }
 .content a:hover { text-decoration: underline; }
 .content img, .content video { max-width: 100%; }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/neocities.js"></script>
+</head>
+<style>
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 0.5rem;
+}
+
+.image-container {
+    width: 100%;
+}
+
+/* Standard thumbnail state */
+.gallery-img {
+  cursor: pointer;
+  transition: transform 0.3s ease, all 0.3s ease;
+  max-width: 100%;
+  z-index: 1;
+}
+
+/* Expanded state */
+.gallery-img.zoomed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: 1000;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+/* Optional: Dim the background when zoomed */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 999;
+}
+
+.overlay.active { display: block; }
+</style>
+<body>
+  <div class="side-left"></div>
+  <main>
+    <header style="text-align: center; margin: 2rem; font-size: 1.5rem;">
+    <a href="../index.html" style="padding: 2rem;">[go back]</a>
+    </header>
+<h1 style="text-align: center;">Photography</h1>
+<section class="gallery">
+<div class="image-container"><img src="../img/ph06.jpg" alt="Photograph 6" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph05.jpg" alt="Photograph 5" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph03.jpg" alt="Photograph 3" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph01.jpg" alt="Photograph 1" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph04.jpg" alt="Photograph 4" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph02.jpg" alt="Photograph 2" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph08.jpg" alt="Photograph 8" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph07.jpg" alt="Photograph 7" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph14.jpg" alt="Photograph 14" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph12.jpg" alt="Photograph 12" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph13.jpg" alt="Photograph 13" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph11.jpg" alt="Photograph 11" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph15.jpg" alt="Photograph 15" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph09.jpg" alt="Photograph 9" loading="lazy"></div>
+<div class="image-container"><img src="../img/ph10.jpg" alt="Photograph 10" loading="lazy"></div>
+  <div class="image-container"><img src="../img/ph16.jpg" alt="Photograph 16" loading="lazy"></div>
+</section>
+    <footer style="text-align: center; margin: 2rem; font-size: 1.5rem;">
+    <a href="../index.html" style="padding: 2rem;">[go back]</a>
+    </footer>
+  </main>
+  <div class="side-right"></div>
+</body>
+</html>

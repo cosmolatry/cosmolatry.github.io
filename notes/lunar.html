@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/neocities.js"></script>
+</head>
+<body>
+      <div class="side-left"></div>
+  <main>
+    <header style="text-align: center; margin: 2rem; font-size: 1.5rem;">
+        <a href="../index.html" style="padding: 2rem;">[go back]</a>
+    </header>
+    <h1>Lunar Calendar</h1>
+    <h2>Challenges</h2>
+    <p>The difficulty with designing a lunar calendar is that there are many sensitive constraints:</p>
+    <ul>
+    <li>The lunation, or the period of time between two new moons, is about 29.53059 days long.</li>
+    <li>The lunation actually changes after thousands of years, eventually making any calendar obsolete until its logic is recalculated.</li>
+    <li>We cannot have fractions of a day in a calendar. Having a short day or long day would throw us out of sync with the solar calendar, which would be very confusing and not ideal. A lunar day should be equivalent to a solar day.</li>
+    <li>We can only approximately achieve a good synchronicity with the moon as an average over several months.</li>
+    <li>This is only possible because, to the human eye, there is a period of time before and after a new moon where the moon appears to be new. Conservatively, this appears to be about a day's worth of time before or after the exact moment of the new moon.</li>
+    <li>If we want a lunar calendar to be universally useful, there should never be a moon visible when the calendar says there is a new moon.</li>
+    <li>The calendar should be moderately predictable for people who are paying attention, and it should be easy to predict through simple rules or a simple reference if forgotten.</li>
+    </ul>
+    <h2>Current Design</h2>
+    <p>We define a Minor Month as a month with 29 days and a Major Month as a month with 30 days.</p>
+    <p>We define our Lunar Year to be twelve alternating months of Minor Months and Major Months.</p>
+    <p>This puts us at an average of 29.5 days for an artifical lunation (the lunation indicated on the calendar). This means that, after one year the calendar will be .03059 days, or about 44 minutes, too short and out of sync with the real moon cycle.</p>
+    <p>To solve this drift problem, we can consider a different ratio of Minor Months and Major Months. Unfortunately this will lead to significant problems. On a monthly basis, the Minor Month will be about half a day too short and the Major Month will be about half a day too long. If you have two Minor Months or Major Months in a row, that's already one whole day out of sync in either direction. At three consecutive months it becomes visibly out of sync, so two consecutive long or short months is our limit of investigation. The artificial lunation of the resulting years would be either 29.33333 or 29.66666 days, putting us in a much worse position. The only option left, then, is to introduce leap months to our years using an agreeable pattern.</p>
+
+    <hr>
+    <h2>Unfinished Notes</h2>
+    <p>Leap Triggers: Multipliers | Percentage of Total Correction || Accuracy<br>
+        L0 (Base): 3 (3 years) | 90.81% || within 4 minutes<br>
+        L1: 12 (36 years) | 7.57% || within 43 seconds<br>
+        L2: 6 (216 years) | 1.26% || within 10 seconds<br>
+        L3: 6 (1296 years) | 0.21% || within 4 seconds<br>
+        L4: 2 (2592 years) | 0.11% || within 1.3 seconds<br>
+        L5: 2 (5184 years) | 0.05% || within 0.1 seconds</p>
+    <p>Time until obsolescence: maybe 100k years, should be recalculated about every 40k solar years.</p>
+    <p>We define a Minor Year as a year with 12 months and a Major Year as a year with 13 months.</p>
+    <p>We define a Minor Triad as a sequence of three years which has, in order, a Minor Year, a Major Year, and a Minor Year.</p>
+    <p>We define a Major Triad as a sequence of three years which has, in order, a Major Year, a Minor Year, and a Major Year.</p>
+    <p>Our Lunar Calendar will be a sequence of Triads, primarily Minor Triads that are punctuated by Major Triads.</p>
+    <p>L1-L5 trigger Major Triads. If two or more Major Triads are triggered, they are put into the Major Triad counter and delayed. The delay leaves a Minor Triad in-between each Major Triad.</p>
+    <p>Major Triads alternate with Minor Triads so that you can not have two Major Triads or Minor Triads in a row, and therefore you cannot have two Major Years in a row, but you can have two Minor Years in a row.</p>
+
+    <p>Thus, if a Minor Year is O, and a Major Year is X:<br>
+    a Minor Triad sequence looks like: ...OXO...<br>
+    a Major Triad sequence looks like: ...XOX...<br>
+    A sequence without triggers looks like: ...OXOOXOOXO...<br>
+    A sequence with one trigger, only L1, looks like: ...XOXOXO...<br>
+    A sequence with two triggers, only L1 and L2, looks like: ...XOXOXOXOXOXO...</br>
+    A longer normal sequence with two triggers in the middle looks like: ...OXOOXOOXOXOXOXOXOXOXOOXOOXO...</p>
+    <p>With all five triggers, it takes a total of 30 years to clear out the queue, which leaves a sufficient gap before L1 is triggered again.</p>
+    <footer style="text-align: center; margin: 2rem; font-size: 1.5rem;">
+        <a href="../index.html" style="padding: 2rem;">[go back]</a>
+    </footer>
+  </main>
+  <div class="side-right"></div>
+</body>
+</html>

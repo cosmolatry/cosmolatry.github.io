@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<style>
+    html {
+        min-height: 100vh;
+        background: radial-gradient(
+        circle at center,
+        #3E7DCC 0%,
+        #1F004F 60%,
+        #000000 100%
+        );
+    }
+    html, body {
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    img {
+        max-width: calc(100vw - 4rem);
+        max-height: calc(100vh - 4rem);
+        width: min(calc(100vw - 4rem), calc(100vh - 4rem));
+        height: auto;
+        object-fit: contain;
+        position: relative;
+        z-index: 10;
+        mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0) 85%);
+        -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0) 85%);
+    }
+    .star {
+        position: fixed;
+        background: white;
+        border-radius: 50%;
+        pointer-events: none;
+    }
+</style>
+<body>
+<img id="ncrp-symbol" src="svg/ncrp-symbol.svg" alt="NCRP Symbol" />
+<script>
+    function createStars(numStars) {
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            const size = Math.random() * 3 + 0.5;
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            
+            const left = Math.random() * 100;
+            const top = Math.random() * 100;
+            star.style.left = left + '%';
+            star.style.top = top + '%';
+            
+            const dx = left - 50;
+            const dy = top - 50;
+            const distance = Math.sqrt(dx * dx + dy * dy) / 70;
+            const edgeOpacity = Math.min(Math.max(distance, 0), 1);
+            star.style.opacity = 0.3 + edgeOpacity * 0.7;
+            
+            document.body.appendChild(star);
+        }
+    }
+    
+    createStars(250);
+</script>
+</body>
+</html>

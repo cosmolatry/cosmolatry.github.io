@@ -1,8 +1,0 @@
-[book]
-title = ""
-authors = [""]
-language = "en"
-
-[output.html]
-default-theme = "light"
-preferred-dark-theme = "coal"

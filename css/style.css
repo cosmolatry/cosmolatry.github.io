@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fonts/ttf/OpenSauceSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fonts/ttf/OpenSauceSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/ttf/JetBrainsMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html {
+    min-height: 100vh;
+background: linear-gradient(to bottom, #3E7DCC, #1F004F, #111111, #1F004F, #3E7DCC);
+}
+
+body {
+    color: black;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) min(72ch, calc(100% - 2rem)) minmax(1rem, 1fr);
+    min-height: 100vh;
+
+    /* font-family: system-ui, -apple-system, sans-serif; */
+    font-family: 'Open Sauce Sans', sans-serif;
+    line-height: 1.5rem;
+    max-width: 72ch;
+    margin: 0 auto;
+    padding: 0;
+}
+
+main {
+    background-color: #F4F5F0;
+    padding: 0 1rem;
+}
+
+ul {
+    padding-left: 1rem;
+}
+
+li {
+    margin: 1rem 0;
+}
+
+/* h1, h2, h3 {
+line-height: 1.5rem;
+} */
+
+.side-left {
+    background: linear-gradient(to right, transparent 0rem, #F4F5F0 1rem);
+}
+
+.side-right {
+    background: linear-gradient(to left, transparent 0rem, #F4F5F0 1rem);
+}
+
+a, h2 a {
+    color: #1F004F;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background: linear-gradient(to bottom, #111111, #1F004F, #3E7DCC, #1F004F, #111111);
+    }
+
+    body {
+        color: #F4F5F0;
+    }
+    
+    main {
+        background-color: black;
+    }
+
+    .side-left {
+        background: linear-gradient(to right, transparent 0rem, black 1rem);
+    }
+
+    .side-right {
+        background: linear-gradient(to left, transparent 0rem, black 1rem);
+    }
+
+    a, h2 a {
+        color: greenyellow;
+    }
+}

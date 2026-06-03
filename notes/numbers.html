@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/neocities.js"></script>
+</head>
+<body>
+      <div class="side-left"></div>
+  <main>
+    <header style="text-align: center; margin: 2rem; font-size: 1.5rem;">
+        <a href="../index.html" style="padding: 2rem;">[go back]</a>
+    </header>
+<h1>Number System</h1>
+<!-- Value,Name,Phonetic (IPA)
+0,Vo,/voʊ/
+1,Law,/lɔː/
+2,Pi,/pi/
+3,Meh,/mɛ/
+4,Ku,/ku/
+5,Ta,/ta/
+6,Fei,/reɪ/
+7,Djie,/biɛ/
+8,Sui,/suɪ/
+9,Wiu,/wiuː/
+10,Nai,/naɪ/
+11,Shia,/ʃiɑː/
+
+
+vo law pi meh ka tu sei djie nai shia fua chau
+
+po maw ni teh ka vu thei fie lai shia sua chau
+
+Value,Name,Phonetic (IPA)
+0,Po,/poʊ/
+1,Maw,/mɔː/
+2,Ni,/ni/
+3,Teh,/tɛ/
+4,Ka,/kɑː/
+5,Vu,/vuː/
+6,Thei,/θeɪ/
+7,Fie,/fiɛ/
+8,Lai,/laɪ/
+9,Shia,/ʃiɑː/
+10,Sua,/suɑː/
+11,Chau,/tʃaʊ/ -->
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    text-align: center;
+    padding: 0.25rem;
+  }
+
+@media (prefers-color-scheme: dark) {
+    .svg-digit {
+        filter: invert(1);
+    }
+}
+
+.grid-container {
+  display: grid;
+  /* Define 7 equal columns and 2 equal rows */
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 1fr); 
+  gap: 0.5rem;
+  width: 100%;
+  align-items: center; /* Vertically centers items in their space */
+  justify-items: center;
+}
+
+.grid-container img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Side Images: Pin to col 1 and col 7, spanning rows 1 through 3 */
+.item-0 { grid-area: 1 / 1 / 3 / 2; } 
+.item-6 { grid-area: 1 / 7 / 3 / 8; }
+
+/* Top Row (Row 1, Columns 2-6) */
+.item-1 { grid-area: 1 / 2; }
+.item-2 { grid-area: 1 / 3; }
+.item-3 { grid-area: 1 / 4; }
+.item-4 { grid-area: 1 / 5; }
+.item-5 { grid-area: 1 / 6; }
+
+/* Bottom Row (Row 2, Columns 2-6, Right to Left) */
+.item-7  { grid-area: 2 / 6; }
+.item-8  { grid-area: 2 / 5; }
+.item-9  { grid-area: 2 / 4; }
+.item-10 { grid-area: 2 / 3; }
+.item-11 { grid-area: 2 / 2; }
+
+.main-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.label-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.label-row span {
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+}
+</style>
+
+<div class="main-wrapper">
+  <div class="label-row">
+    <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+  </div>
+
+<div class="grid-container">
+  <img src="../svg/0.svg" class="svg-digit item-0">
+  <img src="../svg/1.svg" class="svg-digit item-1">
+  <img src="../svg/2.svg" class="svg-digit item-2">
+  <img src="../svg/3.svg" class="svg-digit item-3">
+  <img src="../svg/4.svg" class="svg-digit item-4">
+  <img src="../svg/5.svg" class="svg-digit item-5">
+  <img src="../svg/6.svg" class="svg-digit item-6">
+  <img src="../svg/7.svg" class="svg-digit item-7">
+  <img src="../svg/8.svg" class="svg-digit item-8">
+  <img src="../svg/9.svg" class="svg-digit item-9">
+  <img src="../svg/10.svg" class="svg-digit item-10">
+  <img src="../svg/11.svg" class="svg-digit item-11">
+</div>
+
+<div class="label-row">
+    <span>0</span><span>11</span><span>10</span><span>9</span><span>8</span><span>7</span><span>6</span>
+</div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Glyph</th>
+      <th>Value</th>
+      <th>Phonetic (IPA)</th>
+      <th>Name (Approximation)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><img class="svg-digit" src="../svg/0.svg"></td><td>0</td><td>/po/</td><td>Po</td></tr>
+    <tr><td><img class="svg-digit" src="../svg/1.svg"></td><td>1</td><td>/mɔ/</td><td>Maw</td></tr>
+    <tr><td><img class="svg-digit" src="../svg/2.svg"></td><td>2</td><td>/ni/</td><td>Ni</td></tr>
+    <tr><td><img class="svg-digit" src="../svg/3.svg"></td><td>3</td><td>/tɛ/</td><td>Teh</td></tr>
+    <tr><td><img class="svg-digit" src="../svg/4.svg"></td><td>4</td><td>/kɑ/</td><td>Ka</td></tr>
+    <tr><td><img class="svg-digit" src="../svg/5.svg"></td><td>5</td><td>/vu/</td><td>Vu</td></tr>
+    <tr><td><img class="svg-digit" src="../svg/6.svg"></td><td>6</td><td>/θeɪ/</td><td>Thei</td></tr>
+    <tr><td><img class="svg-digit" src="../svg/7.svg"></td><td>7</td><td>/fiɛ/</td><td>Fie</td></tr>
+    <tr><td><img class="svg-digit" src="../svg/8.svg"></td><td>8</td><td>/laɪ/</td><td>Lai</td></tr>
+    <tr><td><img class="svg-digit" src="../svg/9.svg"></td><td>9</td><td>/ʃiɑ/</td><td>Shia</td></tr>
+    <tr><td><img class="svg-digit" src="../svg/10.svg"></td><td>10</td><td>/suɑ/</td><td>Sua</td></tr>
+    <tr><td><img class="svg-digit" src="../svg/11.svg"></td><td>11</td><td>/tʃaʊ/</td><td>Chau</td></tr>
+  </tbody>
+</table>
+
+    <footer style="text-align: center; margin: 2rem; font-size: 1.5rem;">
+        <a href="../index.html" style="padding: 2rem;">[go back]</a>
+    </footer>
+  </main>
+  <div class="side-right"></div>
+</body>
+</html>
